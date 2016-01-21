@@ -1,0 +1,11 @@
+Para ignorar archivos que no quieran ser agregados al proyecto con Git, es necesario crear primero un archivo que contenga definidas las características de los archivos a ignorar.
+Este archivo debe llamarse ".gitignore" y esta es su configuración:
+
+* Toda linea en blanco o que inicie con # es ignorada, esto es bueno para comentarios.
+* Si se inicia un /, se especifica que se trata de un archivo y no un directorio (Por ejemplo: /hi).
+* Así mismo si termina con /, se sabe que es un directorio (Por ejemplo: hi/).
+* Puede negarse una previa configuración con ! (Por ejemplo si se tenía *.c y luego !main.c, ignorará todos los .c excepto main).
+* Los glob patterns pueden usarse, como * (Por ejemplo: *.c), también corchetes que contienen caracteres específicos ([oc])
+  El signo ? para un sólo caracter.
+  Puede crearse un rango de x caracteres con corchetes (Por ejemplo, de uno a dos caracteres: [1-2]).
+  También se pueden usar dos * para ignorar directorios anidados ( Por ejemplo: src/**/fun ignoraría src/fun y src/dir2/fun).
